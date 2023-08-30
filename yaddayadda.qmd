@@ -3,4 +3,59 @@ title: "Untitled"
 format: html
 ---
 
-We will install `tidyverse` packages
+#### We will install `tidyverse` packages using the following command in the **console**.
+
+`install.packages("tidyverse")`
+
+Load the package 🤤
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+mpg
+```
+
+```{r}
+head(mpg)
+tail(mpg)
+slice(mpg, 18:37)
+```
+
+```{r}
+dim(mpg)
+nrow(mpg)
+ncol(mpg)
+```
+
+```{r}
+class(mpg)
+```
+
+```{r}
+colnames(mpg)
+```
+
+## Subsetting columns using select() function
+
+```{r}
+select(mpg, model, year)
+```
+
+```{r}
+trk = slice(mpg, 56:89)
+select(trk, model, year)
+```
+
+```{r}
+select(mpg, contains("isp"))
+```
+
+```{r}
+filter(mpg, (year == 2008 | cyl >= 6))
+```
+
+```{r}
+dt = readr::read_csv("svcckww1jskrstnz_csv.zip")
+```
